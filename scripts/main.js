@@ -13,16 +13,16 @@ var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 
 function setUserName() {
-  var myName = prompt('Please enter your name.');
+  var myName = prompt('Ты кто по жизни будешь?');
   localStorage.setItem('name', myName);
-  myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+  myHeading.innerHTML = 'Здорова, ' + myName;
 }
 
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+  myHeading.innerHTML = 'Здорова, ' + storedName;
 }
 
 myButton.onclick = function() {
